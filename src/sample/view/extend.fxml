@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ExtendController">
+   <children>
+      <TextField fx:id="display" editable="false" layoutX="11.0" layoutY="39.0" prefHeight="35.0" prefWidth="254.0" />
+      <GridPane hgap="15.0" layoutX="18.0" layoutY="81.0" vgap="5.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" fx:id="btnB" onAction="#dataEntering" prefHeight="34.0" prefWidth="36.0" text="4" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#dataEntering" prefHeight="34.0" prefWidth="36.0" text="7" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#dataEntering" prefHeight="34.0" prefWidth="36.0" text="5" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#dataEntering" prefHeight="34.0" prefWidth="36.0" text="8" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#dataEntering" prefHeight="34.0" prefWidth="36.0" text="6" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#dataEntering" prefHeight="34.0" prefWidth="36.0" text="9" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#dataEntering" prefHeight="34.0" prefWidth="36.0" text="0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#dataEntering" prefHeight="34.0" prefWidth="36.0" text="." textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#resultAction" prefHeight="34.0" prefWidth="36.0" text="=" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#commandAction" prefHeight="34.0" prefWidth="36.0" text="/" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#commandAction" prefHeight="34.0" prefWidth="36.0" text="*" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#commandAction" prefHeight="34.0" prefWidth="36.0" text="-" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#commandAction" prefHeight="34.0" prefWidth="36.0" text="+" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#dataEntering" prefHeight="34.0" prefWidth="36.0" text="1" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#dataEntering" prefHeight="34.0" prefWidth="36.0" text="2" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#dataEntering" prefHeight="34.0" prefWidth="36.0" text="3" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#commandAction" prefHeight="34.0" prefWidth="36.0" text="sqr" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#backOnStep" prefHeight="34.0" prefWidth="36.0" text="&lt;-" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearCommand" prefHeight="35.0" prefWidth="36.0" text="C" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#bracketsEnter" prefHeight="34.0" prefWidth="36.0" text="(" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <Button mnemonicParsing="false" onAction="#bracketsEnter" prefHeight="34.0" prefWidth="36.0" text=")" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#commandAction" prefHeight="34.0" prefWidth="36.0" text="^" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" onAction="#factorialCount" prefHeight="34.0" prefWidth="36.0" text="n!" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="3" />
+            <Button mnemonicParsing="false" onAction="#minisCommand" prefHeight="34.0" prefWidth="36.0" text="-x" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#oneDeleteX" prefHeight="34.0" prefWidth="36.0" text="1/x" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="4" />
+         </children>
+      </GridPane>
+      <MenuBar layoutX="10.0" layoutY="5.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open" />
+              <MenuItem mnemonicParsing="false" onAction="#complexCounting" text="Simple counting" />
+                  <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#saveResult" text="Save result" />
+                  <MenuItem mnemonicParsing="false" onAction="#clearDisplay" text="Clear display" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>
